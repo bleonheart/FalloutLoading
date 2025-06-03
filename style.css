@@ -1,59 +1,110 @@
+
+
 *, *:before, *:after {
-     box-sizing: border-box;
+  box-sizing: border-box;
 }
- *, *:focus, *:active, *:focus:active, *:before, *:before:focus, *:before:active, *:before:focus:active, *:after, *:after:focus, *:after:active, *:after:focus:active {
-     outline: none;
+*, *:focus, *:active, *:focus:active, *:before, *:before:focus, *:before:active, *:before:focus:active, *:after, *:after:focus, *:after:active, *:after:focus:active {
+  outline: none;
 }
- div {
-     left: 50%;
-     position: absolute;
-     top: 50%;
-     transform: translate(-50%, -50%);
+.logo {
+  background-image: url("logo.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 8rem;
+  width:16rem;
+  float:left;
+  top:auto;
+  bottom:auto;
 }
- html {
-     font-size: 10px;
+.border-box {
+  box-sizing: border-box;
+
+  width:calc( 100% - 8rem );
+  left : 4rem;
+  position: fixed;
+  bottom:4rem;
+  height:12rem;
+  border:#ffa200;
+  border-style: solid;
+  border-width: 3px;
+  font-size: 2rem;
+  padding: 12px;
+  color: #ffa200;
+  text-shadow: #222 3px 1px 0;
+  font-family: "Actor", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  line-height: auto;
+
 }
- body {
-     background: #222;
+-- shadow
+.border-box:before, .border-box:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  box-shadow: 0 0 1px 1px #000000;
+  transform: translate(0px,0px);
 }
- div {
-     height: 7rem;
-     width: 7rem;
+
+.icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
- div:before, div:after {
-     border-radius: 50%;
-     content: "";
-     height: 7rem;
-     left: 50%;
-     position: absolute;
-     top: 50%;
-     transform: translate(-50%, -50%);
-     width: 7rem;
-     z-index: -1;
+
+html {
+  font-size: 10px;
 }
- div:before {
-     box-shadow: 0 0 0 0 #ff505f, 70px -20px 0 -3rem #ff505f, 69px -20px 0 -3rem #ff505f, 68px -20px 0 -3rem #ff505f, 67px -20px 0 -3rem #ff505f, 66px -20px 0 -3rem #ff505f, 65px -20px 0 -3rem #ff505f, 64px -20px 0 -3rem #ff505f, 63px -20px 0 -3rem #ff505f, 62px -20px 0 -3rem #ff505f, 61px -20px 0 -3rem #ff505f, 60px -20px 0 -3rem #ff505f, 59px -20px 0 -3rem #ff505f, 58px -20px 0 -3rem #ff505f, 57px -20px 0 -3rem #ff505f, 56px -20px 0 -3rem #ff505f, 55px -20px 0 -3rem #ff505f, 54px -20px 0 -3rem #ff505f, 53px -20px 0 -3rem #ff505f, 52px -20px 0 -3rem #ff505f, 51px -20px 0 -3rem #ff505f, 50px -20px 0 -3rem #ff505f, 49px -20px 0 -3rem #ff505f, 48px -20px 0 -3rem #ff505f, 47px -20px 0 -3rem #ff505f, 46px -20px 0 -3rem #ff505f, 45px -20px 0 -3rem #ff505f, 44px -20px 0 -3rem #ff505f, 43px -20px 0 -3rem #ff505f, 42px -20px 0 -3rem #ff505f, 41px -20px 0 -3rem #ff505f, 40px -20px 0 -3rem #ff505f, 39px -20px 0 -3rem #ff505f, 38px -20px 0 -3rem #ff505f, 37px -20px 0 -3rem #ff505f, 36px -20px 0 -3rem #ff505f, 35px -20px 0 -3rem #ff505f, 34px -20px 0 -3rem #ff505f, 33px -20px 0 -3rem #ff505f, 32px -20px 0 -3rem #ff505f, 31px -20px 0 -3rem #ff505f, 30px -20px 0 -3rem #ff505f, 29px -20px 0 -3rem #ff505f, 28px -20px 0 -3rem #ff505f, 27px -20px 0 -3rem #ff505f, 26px -20px 0 -3rem #ff505f, 25px -20px 0 -3rem #ff505f, 24px -20px 0 -3rem #ff505f, 23px -20px 0 -3rem #ff505f, 22px -20px 0 -3rem #ff505f, 21px -20px 0 -3rem #ff505f, 20px -20px 0 -3rem #ff505f, 19px -20px 0 -3rem #ff505f, 18px -20px 0 -3rem #ff505f, 17px -20px 0 -3rem #ff505f, 16px -20px 0 -3rem #ff505f, 15px -20px 0 -3rem #ff505f, 14px -20px 0 -3rem #ff505f, 13px -20px 0 -3rem #ff505f, 12px -20px 0 -3rem #ff505f, 11px -20px 0 -3rem #ff505f, 10px -20px 0 -3rem #ff505f, 9px -20px 0 -3rem #ff505f, 8px -20px 0 -3rem #ff505f, 7px -20px 0 -3rem #ff505f, 6px -20px 0 -3rem #ff505f, 5px -20px 0 -3rem #ff505f, 4px -20px 0 -3rem #ff505f, 3px -20px 0 -3rem #ff505f, 2px -20px 0 -3rem #ff505f, 1px -20px 0 -3rem #ff505f, 0px -20px 0 -3rem #ff505f, -1px -20px 0 -3rem #ff505f, -2px -20px 0 -3rem #ff505f, -3px -20px 0 -3rem #ff505f, -4px -20px 0 -3rem #ff505f, -5px -20px 0 -3rem #ff505f, -6px -20px 0 -3rem #ff505f, -7px -20px 0 -3rem #ff505f, -8px -20px 0 -3rem #ff505f, -9px -20px 0 -3rem #ff505f, -10px -20px 0 -3rem #ff505f, -11px -20px 0 -3rem #ff505f, -12px -20px 0 -3rem #ff505f, -13px -20px 0 -3rem #ff505f, -14px -20px 0 -3rem #ff505f, -15px -20px 0 -3rem #ff505f, -16px -20px 0 -3rem #ff505f, -17px -20px 0 -3rem #ff505f, -18px -20px 0 -3rem #ff505f, -19px -20px 0 -3rem #ff505f, -20px -20px 0 -3rem #ff505f, -21px -20px 0 -3rem #ff505f, -22px -20px 0 -3rem #ff505f, -23px -20px 0 -3rem #ff505f, -24px -20px 0 -3rem #ff505f, -25px -20px 0 -3rem #ff505f, -26px -20px 0 -3rem #ff505f, -27px -20px 0 -3rem #ff505f, -28px -20px 0 -3rem #ff505f, -29px -20px 0 -3rem #ff505f, -30px -20px 0 -3rem #ff505f, -31px -20px 0 -3rem #ff505f, -32px -20px 0 -3rem #ff505f, -33px -20px 0 -3rem #ff505f, -34px -20px 0 -3rem #ff505f, -35px -20px 0 -3rem #ff505f, -36px -20px 0 -3rem #ff505f, -37px -20px 0 -3rem #ff505f, -38px -20px 0 -3rem #ff505f, -39px -20px 0 -3rem #ff505f, -40px -20px 0 -3rem #ff505f, -41px -20px 0 -3rem #ff505f, -42px -20px 0 -3rem #ff505f, -43px -20px 0 -3rem #ff505f, -44px -20px 0 -3rem #ff505f, -45px -20px 0 -3rem #ff505f, -46px -20px 0 -3rem #ff505f, -47px -20px 0 -3rem #ff505f, -48px -20px 0 -3rem #ff505f, -49px -20px 0 -3rem #ff505f, -50px -20px 0 -3rem #ff505f, -51px -20px 0 -3rem #ff505f, -52px -20px 0 -3rem #ff505f, -53px -20px 0 -3rem #ff505f, -54px -20px 0 -3rem #ff505f, -55px -20px 0 -3rem #ff505f, -56px -20px 0 -3rem #ff505f, -57px -20px 0 -3rem #ff505f, -58px -20px 0 -3rem #ff505f, -59px -20px 0 -3rem #ff505f, -60px -20px 0 -3rem #ff505f, -61px -20px 0 -3rem #ff505f, -62px -20px 0 -3rem #ff505f, -63px -20px 0 -3rem #ff505f, -64px -20px 0 -3rem #ff505f, -65px -20px 0 -3rem #ff505f, -66px -20px 0 -3rem #ff505f, -67px -20px 0 -3rem #ff505f, -68px -20px 0 -3rem #ff505f, -69px -20px 0 -3rem #ff505f, -70px -20px 0 -3rem #ff505f, 105px 0px 0 -3rem #ff505f, 104px 0px 0 -3rem #ff505f, 103px 0px 0 -3rem #ff505f, 102px 0px 0 -3rem #ff505f, 101px 0px 0 -3rem #ff505f, 100px 0px 0 -3rem #ff505f, 99px 0px 0 -3rem #ff505f, 98px 0px 0 -3rem #ff505f, 97px 0px 0 -3rem #ff505f, 96px 0px 0 -3rem #ff505f, 95px 0px 0 -3rem #ff505f, 94px 0px 0 -3rem #ff505f, 93px 0px 0 -3rem #ff505f, 92px 0px 0 -3rem #ff505f, 91px 0px 0 -3rem #ff505f, 90px 0px 0 -3rem #ff505f, 89px 0px 0 -3rem #ff505f, 88px 0px 0 -3rem #ff505f, 87px 0px 0 -3rem #ff505f, 86px 0px 0 -3rem #ff505f, 85px 0px 0 -3rem #ff505f, 84px 0px 0 -3rem #ff505f, 83px 0px 0 -3rem #ff505f, 82px 0px 0 -3rem #ff505f, 81px 0px 0 -3rem #ff505f, 80px 0px 0 -3rem #ff505f, 79px 0px 0 -3rem #ff505f, 78px 0px 0 -3rem #ff505f, 77px 0px 0 -3rem #ff505f, 76px 0px 0 -3rem #ff505f, 75px 0px 0 -3rem #ff505f, 74px 0px 0 -3rem #ff505f, 73px 0px 0 -3rem #ff505f, 72px 0px 0 -3rem #ff505f, 71px 0px 0 -3rem #ff505f, 70px 0px 0 -3rem #ff505f, 69px 0px 0 -3rem #ff505f, 68px 0px 0 -3rem #ff505f, 67px 0px 0 -3rem #ff505f, 66px 0px 0 -3rem #ff505f, 65px 0px 0 -3rem #ff505f, 64px 0px 0 -3rem #ff505f, 63px 0px 0 -3rem #ff505f, 62px 0px 0 -3rem #ff505f, 61px 0px 0 -3rem #ff505f, 60px 0px 0 -3rem #ff505f, 59px 0px 0 -3rem #ff505f, 58px 0px 0 -3rem #ff505f, 57px 0px 0 -3rem #ff505f, 56px 0px 0 -3rem #ff505f, 55px 0px 0 -3rem #ff505f, 54px 0px 0 -3rem #ff505f, 53px 0px 0 -3rem #ff505f, 52px 0px 0 -3rem #ff505f, 51px 0px 0 -3rem #ff505f, 50px 0px 0 -3rem #ff505f, 49px 0px 0 -3rem #ff505f, 48px 0px 0 -3rem #ff505f, 47px 0px 0 -3rem #ff505f, 46px 0px 0 -3rem #ff505f, 45px 0px 0 -3rem #ff505f, 44px 0px 0 -3rem #ff505f, 43px 0px 0 -3rem #ff505f, 42px 0px 0 -3rem #ff505f, 41px 0px 0 -3rem #ff505f, 40px 0px 0 -3rem #ff505f, 39px 0px 0 -3rem #ff505f, 38px 0px 0 -3rem #ff505f, 37px 0px 0 -3rem #ff505f, 36px 0px 0 -3rem #ff505f, 35px 0px 0 -3rem #ff505f, 34px 0px 0 -3rem #ff505f, 33px 0px 0 -3rem #ff505f, 32px 0px 0 -3rem #ff505f, 31px 0px 0 -3rem #ff505f, 30px 0px 0 -3rem #ff505f, 29px 0px 0 -3rem #ff505f, 28px 0px 0 -3rem #ff505f, 27px 0px 0 -3rem #ff505f, 26px 0px 0 -3rem #ff505f, 25px 0px 0 -3rem #ff505f, 24px 0px 0 -3rem #ff505f, 23px 0px 0 -3rem #ff505f, 22px 0px 0 -3rem #ff505f, 21px 0px 0 -3rem #ff505f, 20px 0px 0 -3rem #ff505f, 19px 0px 0 -3rem #ff505f, 18px 0px 0 -3rem #ff505f, 17px 0px 0 -3rem #ff505f, 16px 0px 0 -3rem #ff505f, 15px 0px 0 -3rem #ff505f, 14px 0px 0 -3rem #ff505f, 13px 0px 0 -3rem #ff505f, 12px 0px 0 -3rem #ff505f, 11px 0px 0 -3rem #ff505f, 10px 0px 0 -3rem #ff505f, 9px 0px 0 -3rem #ff505f, 8px 0px 0 -3rem #ff505f, 7px 0px 0 -3rem #ff505f, 6px 0px 0 -3rem #ff505f, 5px 0px 0 -3rem #ff505f, 4px 0px 0 -3rem #ff505f, 3px 0px 0 -3rem #ff505f, 2px 0px 0 -3rem #ff505f, 1px 0px 0 -3rem #ff505f, 0px 0px 0 -3rem #ff505f, -1px 0px 0 -3rem #ff505f, -2px 0px 0 -3rem #ff505f, -3px 0px 0 -3rem #ff505f, -4px 0px 0 -3rem #ff505f, -5px 0px 0 -3rem #ff505f, -6px 0px 0 -3rem #ff505f, -7px 0px 0 -3rem #ff505f, -8px 0px 0 -3rem #ff505f, -9px 0px 0 -3rem #ff505f, -10px 0px 0 -3rem #ff505f, -11px 0px 0 -3rem #ff505f, -12px 0px 0 -3rem #ff505f, -13px 0px 0 -3rem #ff505f, -14px 0px 0 -3rem #ff505f, -15px 0px 0 -3rem #ff505f, -16px 0px 0 -3rem #ff505f, -17px 0px 0 -3rem #ff505f, -18px 0px 0 -3rem #ff505f, -19px 0px 0 -3rem #ff505f, -20px 0px 0 -3rem #ff505f, -21px 0px 0 -3rem #ff505f, -22px 0px 0 -3rem #ff505f, -23px 0px 0 -3rem #ff505f, -24px 0px 0 -3rem #ff505f, -25px 0px 0 -3rem #ff505f, -26px 0px 0 -3rem #ff505f, -27px 0px 0 -3rem #ff505f, -28px 0px 0 -3rem #ff505f, -29px 0px 0 -3rem #ff505f, -30px 0px 0 -3rem #ff505f, -31px 0px 0 -3rem #ff505f, -32px 0px 0 -3rem #ff505f, -33px 0px 0 -3rem #ff505f, -34px 0px 0 -3rem #ff505f, -35px 0px 0 -3rem #ff505f, -36px 0px 0 -3rem #ff505f, -37px 0px 0 -3rem #ff505f, -38px 0px 0 -3rem #ff505f, -39px 0px 0 -3rem #ff505f, -40px 0px 0 -3rem #ff505f, -41px 0px 0 -3rem #ff505f, -42px 0px 0 -3rem #ff505f, -43px 0px 0 -3rem #ff505f, -44px 0px 0 -3rem #ff505f, -45px 0px 0 -3rem #ff505f, -46px 0px 0 -3rem #ff505f, -47px 0px 0 -3rem #ff505f, -48px 0px 0 -3rem #ff505f, -49px 0px 0 -3rem #ff505f, -50px 0px 0 -3rem #ff505f, -51px 0px 0 -3rem #ff505f, -52px 0px 0 -3rem #ff505f, -53px 0px 0 -3rem #ff505f, -54px 0px 0 -3rem #ff505f, -55px 0px 0 -3rem #ff505f, -56px 0px 0 -3rem #ff505f, -57px 0px 0 -3rem #ff505f, -58px 0px 0 -3rem #ff505f, -59px 0px 0 -3rem #ff505f, -60px 0px 0 -3rem #ff505f, -61px 0px 0 -3rem #ff505f, -62px 0px 0 -3rem #ff505f, -63px 0px 0 -3rem #ff505f, -64px 0px 0 -3rem #ff505f, -65px 0px 0 -3rem #ff505f, -66px 0px 0 -3rem #ff505f, -67px 0px 0 -3rem #ff505f, -68px 0px 0 -3rem #ff505f, -69px 0px 0 -3rem #ff505f, -70px 0px 0 -3rem #ff505f, -71px 0px 0 -3rem #ff505f, -72px 0px 0 -3rem #ff505f, -73px 0px 0 -3rem #ff505f, -74px 0px 0 -3rem #ff505f, -75px 0px 0 -3rem #ff505f, -76px 0px 0 -3rem #ff505f, -77px 0px 0 -3rem #ff505f, -78px 0px 0 -3rem #ff505f, -79px 0px 0 -3rem #ff505f, -80px 0px 0 -3rem #ff505f, -81px 0px 0 -3rem #ff505f, -82px 0px 0 -3rem #ff505f, -83px 0px 0 -3rem #ff505f, -84px 0px 0 -3rem #ff505f, -85px 0px 0 -3rem #ff505f, -86px 0px 0 -3rem #ff505f, -87px 0px 0 -3rem #ff505f, -88px 0px 0 -3rem #ff505f, -89px 0px 0 -3rem #ff505f, -90px 0px 0 -3rem #ff505f, -91px 0px 0 -3rem #ff505f, -92px 0px 0 -3rem #ff505f, -93px 0px 0 -3rem #ff505f, -94px 0px 0 -3rem #ff505f, -95px 0px 0 -3rem #ff505f, -96px 0px 0 -3rem #ff505f, -97px 0px 0 -3rem #ff505f, -98px 0px 0 -3rem #ff505f, -99px 0px 0 -3rem #ff505f, -100px 0px 0 -3rem #ff505f, -101px 0px 0 -3rem #ff505f, -102px 0px 0 -3rem #ff505f, -103px 0px 0 -3rem #ff505f, -104px 0px 0 -3rem #ff505f, -105px 0px 0 -3rem #ff505f, 70px 20px 0 -3rem #ff505f, 69px 20px 0 -3rem #ff505f, 68px 20px 0 -3rem #ff505f, 67px 20px 0 -3rem #ff505f, 66px 20px 0 -3rem #ff505f, 65px 20px 0 -3rem #ff505f, 64px 20px 0 -3rem #ff505f, 63px 20px 0 -3rem #ff505f, 62px 20px 0 -3rem #ff505f, 61px 20px 0 -3rem #ff505f, 60px 20px 0 -3rem #ff505f, 59px 20px 0 -3rem #ff505f, 58px 20px 0 -3rem #ff505f, 57px 20px 0 -3rem #ff505f, 56px 20px 0 -3rem #ff505f, 55px 20px 0 -3rem #ff505f, 54px 20px 0 -3rem #ff505f, 53px 20px 0 -3rem #ff505f, 52px 20px 0 -3rem #ff505f, 51px 20px 0 -3rem #ff505f, 50px 20px 0 -3rem #ff505f, 49px 20px 0 -3rem #ff505f, 48px 20px 0 -3rem #ff505f, 47px 20px 0 -3rem #ff505f, 46px 20px 0 -3rem #ff505f, 45px 20px 0 -3rem #ff505f, 44px 20px 0 -3rem #ff505f, 43px 20px 0 -3rem #ff505f, 42px 20px 0 -3rem #ff505f, 41px 20px 0 -3rem #ff505f, 40px 20px 0 -3rem #ff505f, 39px 20px 0 -3rem #ff505f, 38px 20px 0 -3rem #ff505f, 37px 20px 0 -3rem #ff505f, 36px 20px 0 -3rem #ff505f, 35px 20px 0 -3rem #ff505f, 34px 20px 0 -3rem #ff505f, 33px 20px 0 -3rem #ff505f, 32px 20px 0 -3rem #ff505f, 31px 20px 0 -3rem #ff505f, 30px 20px 0 -3rem #ff505f, 29px 20px 0 -3rem #ff505f, 28px 20px 0 -3rem #ff505f, 27px 20px 0 -3rem #ff505f, 26px 20px 0 -3rem #ff505f, 25px 20px 0 -3rem #ff505f, 24px 20px 0 -3rem #ff505f, 23px 20px 0 -3rem #ff505f, 22px 20px 0 -3rem #ff505f, 21px 20px 0 -3rem #ff505f, 20px 20px 0 -3rem #ff505f, 19px 20px 0 -3rem #ff505f, 18px 20px 0 -3rem #ff505f, 17px 20px 0 -3rem #ff505f, 16px 20px 0 -3rem #ff505f, 15px 20px 0 -3rem #ff505f, 14px 20px 0 -3rem #ff505f, 13px 20px 0 -3rem #ff505f, 12px 20px 0 -3rem #ff505f, 11px 20px 0 -3rem #ff505f, 10px 20px 0 -3rem #ff505f, 9px 20px 0 -3rem #ff505f, 8px 20px 0 -3rem #ff505f, 7px 20px 0 -3rem #ff505f, 6px 20px 0 -3rem #ff505f, 5px 20px 0 -3rem #ff505f, 4px 20px 0 -3rem #ff505f, 3px 20px 0 -3rem #ff505f, 2px 20px 0 -3rem #ff505f, 1px 20px 0 -3rem #ff505f, 0px 20px 0 -3rem #ff505f, -1px 20px 0 -3rem #ff505f, -2px 20px 0 -3rem #ff505f, -3px 20px 0 -3rem #ff505f, -4px 20px 0 -3rem #ff505f, -5px 20px 0 -3rem #ff505f, -6px 20px 0 -3rem #ff505f, -7px 20px 0 -3rem #ff505f, -8px 20px 0 -3rem #ff505f, -9px 20px 0 -3rem #ff505f, -10px 20px 0 -3rem #ff505f, -11px 20px 0 -3rem #ff505f, -12px 20px 0 -3rem #ff505f, -13px 20px 0 -3rem #ff505f, -14px 20px 0 -3rem #ff505f, -15px 20px 0 -3rem #ff505f, -16px 20px 0 -3rem #ff505f, -17px 20px 0 -3rem #ff505f, -18px 20px 0 -3rem #ff505f, -19px 20px 0 -3rem #ff505f, -20px 20px 0 -3rem #ff505f, -21px 20px 0 -3rem #ff505f, -22px 20px 0 -3rem #ff505f, -23px 20px 0 -3rem #ff505f, -24px 20px 0 -3rem #ff505f, -25px 20px 0 -3rem #ff505f, -26px 20px 0 -3rem #ff505f, -27px 20px 0 -3rem #ff505f, -28px 20px 0 -3rem #ff505f, -29px 20px 0 -3rem #ff505f, -30px 20px 0 -3rem #ff505f, -31px 20px 0 -3rem #ff505f, -32px 20px 0 -3rem #ff505f, -33px 20px 0 -3rem #ff505f, -34px 20px 0 -3rem #ff505f, -35px 20px 0 -3rem #ff505f, -36px 20px 0 -3rem #ff505f, -37px 20px 0 -3rem #ff505f, -38px 20px 0 -3rem #ff505f, -39px 20px 0 -3rem #ff505f, -40px 20px 0 -3rem #ff505f, -41px 20px 0 -3rem #ff505f, -42px 20px 0 -3rem #ff505f, -43px 20px 0 -3rem #ff505f, -44px 20px 0 -3rem #ff505f, -45px 20px 0 -3rem #ff505f, -46px 20px 0 -3rem #ff505f, -47px 20px 0 -3rem #ff505f, -48px 20px 0 -3rem #ff505f, -49px 20px 0 -3rem #ff505f, -50px 20px 0 -3rem #ff505f, -51px 20px 0 -3rem #ff505f, -52px 20px 0 -3rem #ff505f, -53px 20px 0 -3rem #ff505f, -54px 20px 0 -3rem #ff505f, -55px 20px 0 -3rem #ff505f, -56px 20px 0 -3rem #ff505f, -57px 20px 0 -3rem #ff505f, -58px 20px 0 -3rem #ff505f, -59px 20px 0 -3rem #ff505f, -60px 20px 0 -3rem #ff505f, -61px 20px 0 -3rem #ff505f, -62px 20px 0 -3rem #ff505f, -63px 20px 0 -3rem #ff505f, -64px 20px 0 -3rem #ff505f, -65px 20px 0 -3rem #ff505f, -66px 20px 0 -3rem #ff505f, -67px 20px 0 -3rem #ff505f, -68px 20px 0 -3rem #ff505f, -69px 20px 0 -3rem #ff505f, -70px 20px 0 -3rem #ff505f;
+
+body {
+  background: #222;
 }
- div:after {
-     -webkit-animation: radarPulse 1.8s ease-out infinite;
-     animation: radarPulse 1.8s ease-out infinite;
-     border-radius: 50%;
-     box-shadow: inset 0 0 0 5px #ff505f, inset 0 0 0 31.8181818182px #222, inset 0 0 0 35px #ff505f;
-     z-index: 1;
+
+.icon {
+  height: 7rem;
+  width: 7rem;
 }
- @-webkit-keyframes radarPulse {
-     from {
-         box-shadow: inset 0 0 0 5px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f;
-    }
-     to {
-         box-shadow: inset 0 0 0 5px #ff505f, inset 0 0 0 0 #222, inset 0 0 0 3px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f;
-    }
+.icon:before, .icon:after {
+  border-radius: 50%;
+  content: "";
+  height: 7rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 7rem;
+  z-index: -1;
 }
- @keyframes radarPulse {
-     from {
-         box-shadow: inset 0 0 0 5px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f;
-    }
-     to {
-         box-shadow: inset 0 0 0 5px #ff505f, inset 0 0 0 0 #222, inset 0 0 0 3px #ff505f, inset 0 0 0 32px #222, inset 0 0 0 35px #ff505f;
-    }
+.icon:before {
+  box-shadow: 0 0 0 0 #ffa200, 70px -20px 0 -3rem #ffa200, 69px -20px 0 -3rem #ffa200, 68px -20px 0 -3rem #ffa200, 67px -20px 0 -3rem #ffa200, 66px -20px 0 -3rem #ffa200, 65px -20px 0 -3rem #ffa200, 64px -20px 0 -3rem #ffa200, 63px -20px 0 -3rem #ffa200, 62px -20px 0 -3rem #ffa200, 61px -20px 0 -3rem #ffa200, 60px -20px 0 -3rem #ffa200, 59px -20px 0 -3rem #ffa200, 58px -20px 0 -3rem #ffa200, 57px -20px 0 -3rem #ffa200, 56px -20px 0 -3rem #ffa200, 55px -20px 0 -3rem #ffa200, 54px -20px 0 -3rem #ffa200, 53px -20px 0 -3rem #ffa200, 52px -20px 0 -3rem #ffa200, 51px -20px 0 -3rem #ffa200, 50px -20px 0 -3rem #ffa200, 49px -20px 0 -3rem #ffa200, 48px -20px 0 -3rem #ffa200, 47px -20px 0 -3rem #ffa200, 46px -20px 0 -3rem #ffa200, 45px -20px 0 -3rem #ffa200, 44px -20px 0 -3rem #ffa200, 43px -20px 0 -3rem #ffa200, 42px -20px 0 -3rem #ffa200, 41px -20px 0 -3rem #ffa200, 40px -20px 0 -3rem #ffa200, 39px -20px 0 -3rem #ffa200, 38px -20px 0 -3rem #ffa200, 37px -20px 0 -3rem #ffa200, 36px -20px 0 -3rem #ffa200, 35px -20px 0 -3rem #ffa200, 34px -20px 0 -3rem #ffa200, 33px -20px 0 -3rem #ffa200, 32px -20px 0 -3rem #ffa200, 31px -20px 0 -3rem #ffa200, 30px -20px 0 -3rem #ffa200, 29px -20px 0 -3rem #ffa200, 28px -20px 0 -3rem #ffa200, 27px -20px 0 -3rem #ffa200, 26px -20px 0 -3rem #ffa200, 25px -20px 0 -3rem #ffa200, 24px -20px 0 -3rem #ffa200, 23px -20px 0 -3rem #ffa200, 22px -20px 0 -3rem #ffa200, 21px -20px 0 -3rem #ffa200, 20px -20px 0 -3rem #ffa200, 19px -20px 0 -3rem #ffa200, 18px -20px 0 -3rem #ffa200, 17px -20px 0 -3rem #ffa200, 16px -20px 0 -3rem #ffa200, 15px -20px 0 -3rem #ffa200, 14px -20px 0 -3rem #ffa200, 13px -20px 0 -3rem #ffa200, 12px -20px 0 -3rem #ffa200, 11px -20px 0 -3rem #ffa200, 10px -20px 0 -3rem #ffa200, 9px -20px 0 -3rem #ffa200, 8px -20px 0 -3rem #ffa200, 7px -20px 0 -3rem #ffa200, 6px -20px 0 -3rem #ffa200, 5px -20px 0 -3rem #ffa200, 4px -20px 0 -3rem #ffa200, 3px -20px 0 -3rem #ffa200, 2px -20px 0 -3rem #ffa200, 1px -20px 0 -3rem #ffa200, 0px -20px 0 -3rem #ffa200, -1px -20px 0 -3rem #ffa200, -2px -20px 0 -3rem #ffa200, -3px -20px 0 -3rem #ffa200, -4px -20px 0 -3rem #ffa200, -5px -20px 0 -3rem #ffa200, -6px -20px 0 -3rem #ffa200, -7px -20px 0 -3rem #ffa200, -8px -20px 0 -3rem #ffa200, -9px -20px 0 -3rem #ffa200, -10px -20px 0 -3rem #ffa200, -11px -20px 0 -3rem #ffa200, -12px -20px 0 -3rem #ffa200, -13px -20px 0 -3rem #ffa200, -14px -20px 0 -3rem #ffa200, -15px -20px 0 -3rem #ffa200, -16px -20px 0 -3rem #ffa200, -17px -20px 0 -3rem #ffa200, -18px -20px 0 -3rem #ffa200, -19px -20px 0 -3rem #ffa200, -20px -20px 0 -3rem #ffa200, -21px -20px 0 -3rem #ffa200, -22px -20px 0 -3rem #ffa200, -23px -20px 0 -3rem #ffa200, -24px -20px 0 -3rem #ffa200, -25px -20px 0 -3rem #ffa200, -26px -20px 0 -3rem #ffa200, -27px -20px 0 -3rem #ffa200, -28px -20px 0 -3rem #ffa200, -29px -20px 0 -3rem #ffa200, -30px -20px 0 -3rem #ffa200, -31px -20px 0 -3rem #ffa200, -32px -20px 0 -3rem #ffa200, -33px -20px 0 -3rem #ffa200, -34px -20px 0 -3rem #ffa200, -35px -20px 0 -3rem #ffa200, -36px -20px 0 -3rem #ffa200, -37px -20px 0 -3rem #ffa200, -38px -20px 0 -3rem #ffa200, -39px -20px 0 -3rem #ffa200, -40px -20px 0 -3rem #ffa200, -41px -20px 0 -3rem #ffa200, -42px -20px 0 -3rem #ffa200, -43px -20px 0 -3rem #ffa200, -44px -20px 0 -3rem #ffa200, -45px -20px 0 -3rem #ffa200, -46px -20px 0 -3rem #ffa200, -47px -20px 0 -3rem #ffa200, -48px -20px 0 -3rem #ffa200, -49px -20px 0 -3rem #ffa200, -50px -20px 0 -3rem #ffa200, -51px -20px 0 -3rem #ffa200, -52px -20px 0 -3rem #ffa200, -53px -20px 0 -3rem #ffa200, -54px -20px 0 -3rem #ffa200, -55px -20px 0 -3rem #ffa200, -56px -20px 0 -3rem #ffa200, -57px -20px 0 -3rem #ffa200, -58px -20px 0 -3rem #ffa200, -59px -20px 0 -3rem #ffa200, -60px -20px 0 -3rem #ffa200, -61px -20px 0 -3rem #ffa200, -62px -20px 0 -3rem #ffa200, -63px -20px 0 -3rem #ffa200, -64px -20px 0 -3rem #ffa200, -65px -20px 0 -3rem #ffa200, -66px -20px 0 -3rem #ffa200, -67px -20px 0 -3rem #ffa200, -68px -20px 0 -3rem #ffa200, -69px -20px 0 -3rem #ffa200, -70px -20px 0 -3rem #ffa200, 105px 0px 0 -3rem #ffa200, 104px 0px 0 -3rem #ffa200, 103px 0px 0 -3rem #ffa200, 102px 0px 0 -3rem #ffa200, 101px 0px 0 -3rem #ffa200, 100px 0px 0 -3rem #ffa200, 99px 0px 0 -3rem #ffa200, 98px 0px 0 -3rem #ffa200, 97px 0px 0 -3rem #ffa200, 96px 0px 0 -3rem #ffa200, 95px 0px 0 -3rem #ffa200, 94px 0px 0 -3rem #ffa200, 93px 0px 0 -3rem #ffa200, 92px 0px 0 -3rem #ffa200, 91px 0px 0 -3rem #ffa200, 90px 0px 0 -3rem #ffa200, 89px 0px 0 -3rem #ffa200, 88px 0px 0 -3rem #ffa200, 87px 0px 0 -3rem #ffa200, 86px 0px 0 -3rem #ffa200, 85px 0px 0 -3rem #ffa200, 84px 0px 0 -3rem #ffa200, 83px 0px 0 -3rem #ffa200, 82px 0px 0 -3rem #ffa200, 81px 0px 0 -3rem #ffa200, 80px 0px 0 -3rem #ffa200, 79px 0px 0 -3rem #ffa200, 78px 0px 0 -3rem #ffa200, 77px 0px 0 -3rem #ffa200, 76px 0px 0 -3rem #ffa200, 75px 0px 0 -3rem #ffa200, 74px 0px 0 -3rem #ffa200, 73px 0px 0 -3rem #ffa200, 72px 0px 0 -3rem #ffa200, 71px 0px 0 -3rem #ffa200, 70px 0px 0 -3rem #ffa200, 69px 0px 0 -3rem #ffa200, 68px 0px 0 -3rem #ffa200, 67px 0px 0 -3rem #ffa200, 66px 0px 0 -3rem #ffa200, 65px 0px 0 -3rem #ffa200, 64px 0px 0 -3rem #ffa200, 63px 0px 0 -3rem #ffa200, 62px 0px 0 -3rem #ffa200, 61px 0px 0 -3rem #ffa200, 60px 0px 0 -3rem #ffa200, 59px 0px 0 -3rem #ffa200, 58px 0px 0 -3rem #ffa200, 57px 0px 0 -3rem #ffa200, 56px 0px 0 -3rem #ffa200, 55px 0px 0 -3rem #ffa200, 54px 0px 0 -3rem #ffa200, 53px 0px 0 -3rem #ffa200, 52px 0px 0 -3rem #ffa200, 51px 0px 0 -3rem #ffa200, 50px 0px 0 -3rem #ffa200, 49px 0px 0 -3rem #ffa200, 48px 0px 0 -3rem #ffa200, 47px 0px 0 -3rem #ffa200, 46px 0px 0 -3rem #ffa200, 45px 0px 0 -3rem #ffa200, 44px 0px 0 -3rem #ffa200, 43px 0px 0 -3rem #ffa200, 42px 0px 0 -3rem #ffa200, 41px 0px 0 -3rem #ffa200, 40px 0px 0 -3rem #ffa200, 39px 0px 0 -3rem #ffa200, 38px 0px 0 -3rem #ffa200, 37px 0px 0 -3rem #ffa200, 36px 0px 0 -3rem #ffa200, 35px 0px 0 -3rem #ffa200, 34px 0px 0 -3rem #ffa200, 33px 0px 0 -3rem #ffa200, 32px 0px 0 -3rem #ffa200, 31px 0px 0 -3rem #ffa200, 30px 0px 0 -3rem #ffa200, 29px 0px 0 -3rem #ffa200, 28px 0px 0 -3rem #ffa200, 27px 0px 0 -3rem #ffa200, 26px 0px 0 -3rem #ffa200, 25px 0px 0 -3rem #ffa200, 24px 0px 0 -3rem #ffa200, 23px 0px 0 -3rem #ffa200, 22px 0px 0 -3rem #ffa200, 21px 0px 0 -3rem #ffa200, 20px 0px 0 -3rem #ffa200, 19px 0px 0 -3rem #ffa200, 18px 0px 0 -3rem #ffa200, 17px 0px 0 -3rem #ffa200, 16px 0px 0 -3rem #ffa200, 15px 0px 0 -3rem #ffa200, 14px 0px 0 -3rem #ffa200, 13px 0px 0 -3rem #ffa200, 12px 0px 0 -3rem #ffa200, 11px 0px 0 -3rem #ffa200, 10px 0px 0 -3rem #ffa200, 9px 0px 0 -3rem #ffa200, 8px 0px 0 -3rem #ffa200, 7px 0px 0 -3rem #ffa200, 6px 0px 0 -3rem #ffa200, 5px 0px 0 -3rem #ffa200, 4px 0px 0 -3rem #ffa200, 3px 0px 0 -3rem #ffa200, 2px 0px 0 -3rem #ffa200, 1px 0px 0 -3rem #ffa200, 0px 0px 0 -3rem #ffa200, -1px 0px 0 -3rem #ffa200, -2px 0px 0 -3rem #ffa200, -3px 0px 0 -3rem #ffa200, -4px 0px 0 -3rem #ffa200, -5px 0px 0 -3rem #ffa200, -6px 0px 0 -3rem #ffa200, -7px 0px 0 -3rem #ffa200, -8px 0px 0 -3rem #ffa200, -9px 0px 0 -3rem #ffa200, -10px 0px 0 -3rem #ffa200, -11px 0px 0 -3rem #ffa200, -12px 0px 0 -3rem #ffa200, -13px 0px 0 -3rem #ffa200, -14px 0px 0 -3rem #ffa200, -15px 0px 0 -3rem #ffa200, -16px 0px 0 -3rem #ffa200, -17px 0px 0 -3rem #ffa200, -18px 0px 0 -3rem #ffa200, -19px 0px 0 -3rem #ffa200, -20px 0px 0 -3rem #ffa200, -21px 0px 0 -3rem #ffa200, -22px 0px 0 -3rem #ffa200, -23px 0px 0 -3rem #ffa200, -24px 0px 0 -3rem #ffa200, -25px 0px 0 -3rem #ffa200, -26px 0px 0 -3rem #ffa200, -27px 0px 0 -3rem #ffa200, -28px 0px 0 -3rem #ffa200, -29px 0px 0 -3rem #ffa200, -30px 0px 0 -3rem #ffa200, -31px 0px 0 -3rem #ffa200, -32px 0px 0 -3rem #ffa200, -33px 0px 0 -3rem #ffa200, -34px 0px 0 -3rem #ffa200, -35px 0px 0 -3rem #ffa200, -36px 0px 0 -3rem #ffa200, -37px 0px 0 -3rem #ffa200, -38px 0px 0 -3rem #ffa200, -39px 0px 0 -3rem #ffa200, -40px 0px 0 -3rem #ffa200, -41px 0px 0 -3rem #ffa200, -42px 0px 0 -3rem #ffa200, -43px 0px 0 -3rem #ffa200, -44px 0px 0 -3rem #ffa200, -45px 0px 0 -3rem #ffa200, -46px 0px 0 -3rem #ffa200, -47px 0px 0 -3rem #ffa200, -48px 0px 0 -3rem #ffa200, -49px 0px 0 -3rem #ffa200, -50px 0px 0 -3rem #ffa200, -51px 0px 0 -3rem #ffa200, -52px 0px 0 -3rem #ffa200, -53px 0px 0 -3rem #ffa200, -54px 0px 0 -3rem #ffa200, -55px 0px 0 -3rem #ffa200, -56px 0px 0 -3rem #ffa200, -57px 0px 0 -3rem #ffa200, -58px 0px 0 -3rem #ffa200, -59px 0px 0 -3rem #ffa200, -60px 0px 0 -3rem #ffa200, -61px 0px 0 -3rem #ffa200, -62px 0px 0 -3rem #ffa200, -63px 0px 0 -3rem #ffa200, -64px 0px 0 -3rem #ffa200, -65px 0px 0 -3rem #ffa200, -66px 0px 0 -3rem #ffa200, -67px 0px 0 -3rem #ffa200, -68px 0px 0 -3rem #ffa200, -69px 0px 0 -3rem #ffa200, -70px 0px 0 -3rem #ffa200, -71px 0px 0 -3rem #ffa200, -72px 0px 0 -3rem #ffa200, -73px 0px 0 -3rem #ffa200, -74px 0px 0 -3rem #ffa200, -75px 0px 0 -3rem #ffa200, -76px 0px 0 -3rem #ffa200, -77px 0px 0 -3rem #ffa200, -78px 0px 0 -3rem #ffa200, -79px 0px 0 -3rem #ffa200, -80px 0px 0 -3rem #ffa200, -81px 0px 0 -3rem #ffa200, -82px 0px 0 -3rem #ffa200, -83px 0px 0 -3rem #ffa200, -84px 0px 0 -3rem #ffa200, -85px 0px 0 -3rem #ffa200, -86px 0px 0 -3rem #ffa200, -87px 0px 0 -3rem #ffa200, -88px 0px 0 -3rem #ffa200, -89px 0px 0 -3rem #ffa200, -90px 0px 0 -3rem #ffa200, -91px 0px 0 -3rem #ffa200, -92px 0px 0 -3rem #ffa200, -93px 0px 0 -3rem #ffa200, -94px 0px 0 -3rem #ffa200, -95px 0px 0 -3rem #ffa200, -96px 0px 0 -3rem #ffa200, -97px 0px 0 -3rem #ffa200, -98px 0px 0 -3rem #ffa200, -99px 0px 0 -3rem #ffa200, -100px 0px 0 -3rem #ffa200, -101px 0px 0 -3rem #ffa200, -102px 0px 0 -3rem #ffa200, -103px 0px 0 -3rem #ffa200, -104px 0px 0 -3rem #ffa200, -105px 0px 0 -3rem #ffa200, 70px 20px 0 -3rem #ffa200, 69px 20px 0 -3rem #ffa200, 68px 20px 0 -3rem #ffa200, 67px 20px 0 -3rem #ffa200, 66px 20px 0 -3rem #ffa200, 65px 20px 0 -3rem #ffa200, 64px 20px 0 -3rem #ffa200, 63px 20px 0 -3rem #ffa200, 62px 20px 0 -3rem #ffa200, 61px 20px 0 -3rem #ffa200, 60px 20px 0 -3rem #ffa200, 59px 20px 0 -3rem #ffa200, 58px 20px 0 -3rem #ffa200, 57px 20px 0 -3rem #ffa200, 56px 20px 0 -3rem #ffa200, 55px 20px 0 -3rem #ffa200, 54px 20px 0 -3rem #ffa200, 53px 20px 0 -3rem #ffa200, 52px 20px 0 -3rem #ffa200, 51px 20px 0 -3rem #ffa200, 50px 20px 0 -3rem #ffa200, 49px 20px 0 -3rem #ffa200, 48px 20px 0 -3rem #ffa200, 47px 20px 0 -3rem #ffa200, 46px 20px 0 -3rem #ffa200, 45px 20px 0 -3rem #ffa200, 44px 20px 0 -3rem #ffa200, 43px 20px 0 -3rem #ffa200, 42px 20px 0 -3rem #ffa200, 41px 20px 0 -3rem #ffa200, 40px 20px 0 -3rem #ffa200, 39px 20px 0 -3rem #ffa200, 38px 20px 0 -3rem #ffa200, 37px 20px 0 -3rem #ffa200, 36px 20px 0 -3rem #ffa200, 35px 20px 0 -3rem #ffa200, 34px 20px 0 -3rem #ffa200, 33px 20px 0 -3rem #ffa200, 32px 20px 0 -3rem #ffa200, 31px 20px 0 -3rem #ffa200, 30px 20px 0 -3rem #ffa200, 29px 20px 0 -3rem #ffa200, 28px 20px 0 -3rem #ffa200, 27px 20px 0 -3rem #ffa200, 26px 20px 0 -3rem #ffa200, 25px 20px 0 -3rem #ffa200, 24px 20px 0 -3rem #ffa200, 23px 20px 0 -3rem #ffa200, 22px 20px 0 -3rem #ffa200, 21px 20px 0 -3rem #ffa200, 20px 20px 0 -3rem #ffa200, 19px 20px 0 -3rem #ffa200, 18px 20px 0 -3rem #ffa200, 17px 20px 0 -3rem #ffa200, 16px 20px 0 -3rem #ffa200, 15px 20px 0 -3rem #ffa200, 14px 20px 0 -3rem #ffa200, 13px 20px 0 -3rem #ffa200, 12px 20px 0 -3rem #ffa200, 11px 20px 0 -3rem #ffa200, 10px 20px 0 -3rem #ffa200, 9px 20px 0 -3rem #ffa200, 8px 20px 0 -3rem #ffa200, 7px 20px 0 -3rem #ffa200, 6px 20px 0 -3rem #ffa200, 5px 20px 0 -3rem #ffa200, 4px 20px 0 -3rem #ffa200, 3px 20px 0 -3rem #ffa200, 2px 20px 0 -3rem #ffa200, 1px 20px 0 -3rem #ffa200, 0px 20px 0 -3rem #ffa200, -1px 20px 0 -3rem #ffa200, -2px 20px 0 -3rem #ffa200, -3px 20px 0 -3rem #ffa200, -4px 20px 0 -3rem #ffa200, -5px 20px 0 -3rem #ffa200, -6px 20px 0 -3rem #ffa200, -7px 20px 0 -3rem #ffa200, -8px 20px 0 -3rem #ffa200, -9px 20px 0 -3rem #ffa200, -10px 20px 0 -3rem #ffa200, -11px 20px 0 -3rem #ffa200, -12px 20px 0 -3rem #ffa200, -13px 20px 0 -3rem #ffa200, -14px 20px 0 -3rem #ffa200, -15px 20px 0 -3rem #ffa200, -16px 20px 0 -3rem #ffa200, -17px 20px 0 -3rem #ffa200, -18px 20px 0 -3rem #ffa200, -19px 20px 0 -3rem #ffa200, -20px 20px 0 -3rem #ffa200, -21px 20px 0 -3rem #ffa200, -22px 20px 0 -3rem #ffa200, -23px 20px 0 -3rem #ffa200, -24px 20px 0 -3rem #ffa200, -25px 20px 0 -3rem #ffa200, -26px 20px 0 -3rem #ffa200, -27px 20px 0 -3rem #ffa200, -28px 20px 0 -3rem #ffa200, -29px 20px 0 -3rem #ffa200, -30px 20px 0 -3rem #ffa200, -31px 20px 0 -3rem #ffa200, -32px 20px 0 -3rem #ffa200, -33px 20px 0 -3rem #ffa200, -34px 20px 0 -3rem #ffa200, -35px 20px 0 -3rem #ffa200, -36px 20px 0 -3rem #ffa200, -37px 20px 0 -3rem #ffa200, -38px 20px 0 -3rem #ffa200, -39px 20px 0 -3rem #ffa200, -40px 20px 0 -3rem #ffa200, -41px 20px 0 -3rem #ffa200, -42px 20px 0 -3rem #ffa200, -43px 20px 0 -3rem #ffa200, -44px 20px 0 -3rem #ffa200, -45px 20px 0 -3rem #ffa200, -46px 20px 0 -3rem #ffa200, -47px 20px 0 -3rem #ffa200, -48px 20px 0 -3rem #ffa200, -49px 20px 0 -3rem #ffa200, -50px 20px 0 -3rem #ffa200, -51px 20px 0 -3rem #ffa200, -52px 20px 0 -3rem #ffa200, -53px 20px 0 -3rem #ffa200, -54px 20px 0 -3rem #ffa200, -55px 20px 0 -3rem #ffa200, -56px 20px 0 -3rem #ffa200, -57px 20px 0 -3rem #ffa200, -58px 20px 0 -3rem #ffa200, -59px 20px 0 -3rem #ffa200, -60px 20px 0 -3rem #ffa200, -61px 20px 0 -3rem #ffa200, -62px 20px 0 -3rem #ffa200, -63px 20px 0 -3rem #ffa200, -64px 20px 0 -3rem #ffa200, -65px 20px 0 -3rem #ffa200, -66px 20px 0 -3rem #ffa200, -67px 20px 0 -3rem #ffa200, -68px 20px 0 -3rem #ffa200, -69px 20px 0 -3rem #ffa200, -70px 20px 0 -3rem #ffa200;
+}
+.icon:after {
+  -webkit-animation: radarPulse 1.8s ease-out infinite;
+          animation: radarPulse 1.8s ease-out infinite;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 5px #ffa200, inset 0 0 0 31.8181818182px #222, inset 0 0 0 35px #ffa200;
+  z-index: 1;
+}
+@-webkit-keyframes radarPulse {
+  from {
+    box-shadow: inset 0 0 0 5px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200;
+  }
+  to {
+    box-shadow: inset 0 0 0 5px #ffa200, inset 0 0 0 0 #222, inset 0 0 0 3px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200;
+  }
+}
+@keyframes radarPulse {
+  from {
+    box-shadow: inset 0 0 0 5px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200;
+  }
+  to {
+    box-shadow: inset 0 0 0 5px #ffa200, inset 0 0 0 0 #222, inset 0 0 0 3px #ffa200, inset 0 0 0 32px #222, inset 0 0 0 35px #ffa200;
+  }
 }
