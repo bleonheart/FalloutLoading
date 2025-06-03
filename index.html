@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" >
-   <head>
-      <meta charset="UTF-8">
-      <title>Fallout Loading Screen</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-      <link rel="stylesheet" href="./style.css">
-   </head>
-   <body>
-      <div></div>
-      <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-   </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Actor&display=swap" rel="stylesheet">
+  <title>New Vegas Bulletin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .border-box.__inner__content {
+      font-family: 'Actor', sans-serif;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #hint {
+      margin: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="icon"></div>
+  <div class="border-box __inner__content">
+    <p id="hint"></p>
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    var hints = [
+      "Server is currently in open beta",
+      "Enclave isn't a valid faction. They are the LGBTQ representation of server. Biden asked for DEI",
+      "Welcome to the Mojave, watch out for Powder Gangers",
+      "Make sure to always carry a Rad‐Away; you never know when you'll need it!",
+      "Looking to gamble? Go to the Strip and lose—I mean, win some caps!",
+      "Legion patrols are common. Make sure to bring some Astolfo cosplays"
+    ];
+    var currentIndex = 0;
+    function cycleHints() {
+      $("#hint").css("opacity", "0");
+      setTimeout(function () {
+        $("#hint").text(hints[currentIndex]);
+        $("#hint").css("opacity", "1");
+        currentIndex = (currentIndex + 1) % hints.length;
+      }, 500);
+    }
+    $(document).ready(function () {
+      $("#hint").text(hints[0]);
+      currentIndex = 1;
+      setInterval(cycleHints, 3000);
+    });
+  </script>
+</body>
+
 </html>
