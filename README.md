@@ -1,4 +1,5 @@
 <p align="center">
+ <img src="./logo.svg" alt="Ashveil Logo" width="220" /><br/>
  <strong>FalloutLoading</strong><br/>
  A lightweight Fallout: New Vegas-inspired loading screen for Garry's Mod servers and static web hosting.<br/>
  Built with plain HTML, CSS, and JavaScript for simple customization and deployment.
