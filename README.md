@@ -1,30 +1,22 @@
 <p align="center">
- <img src="./logo.svg" alt="Ashveil Logo" width="220" /><br/>
- <strong>FalloutLoading</strong><br/>
+ <strong>Ashveil — Mojave-Inspired Loading Screen</strong><br/>
  A lightweight Fallout: New Vegas-inspired loading screen for Garry's Mod servers and static web hosting.<br/>
  Built with plain HTML, CSS, and JavaScript for simple customization and deployment.
 </p>
 
 <p align="center">
- <a href="https://bleonheart.github.io/FalloutLoading/">
-  <img src="https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-blue?logo=github" alt="Live Demo" />
- </a>
+ <img src="./logo.svg" alt="Ashveil Logo" width="220" />
+</p>
+
+<p align="center">
  <img src="https://img.shields.io/badge/Build-Static%20Web-success" alt="Static Web" />
 </p>
 
-<h1 align="center">FalloutLoading</h1>
-
 ---
-
-## Live Demo
-
-<p align="center">
- <a href="https://bleonheart.github.io/FalloutLoading/">https://bleonheart.github.io/FalloutLoading/</a>
-</p>
 
 ## Overview
 
-FalloutLoading is a small static loading-screen project styled around the visual identity of Fallout: New Vegas and the Mojave.
+Ashveil is a small static loading-screen project styled around the visual identity of Fallout: New Vegas and the Mojave.
 
 It is intended for Garry's Mod server loading URLs, but it can also be hosted as a normal static webpage.
 
@@ -47,8 +39,8 @@ The project has no build system and no backend.
 Clone the repository:
 
 ```bash
-git clone https://github.com/bleonheart/FalloutLoading.git
-cd FalloutLoading
+git clone https://github.com/bleonheart/Ashveil.git
+cd Ashveil
 ```
 
 Start a local static server:
@@ -70,7 +62,7 @@ After hosting the page publicly, use the hosted URL as your server loading-scree
 For GitHub Pages:
 
 ```text
-https://bleonheart.github.io/FalloutLoading/
+https://bleonheart.github.io/Ashveil/
 ```
 
 The project is static, so any public host capable of serving HTML and CSS can be used.
@@ -128,7 +120,7 @@ An internet connection is therefore required for those externally hosted resourc
 ## Repository Structure
 
 ```text
-FalloutLoading/
+Ashveil/
 ├── index.html
 ├── style.css
 └── README.md
@@ -136,7 +128,7 @@ FalloutLoading/
 
 ## Hosting
 
-FalloutLoading can be deployed through:
+Ashveil can be deployed through:
 
 - GitHub Pages
 - Nginx
